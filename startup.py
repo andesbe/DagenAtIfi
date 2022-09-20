@@ -16,7 +16,7 @@ print('')
 
 
 answer = int(input("Write your answer here: "))
-corr_answer = int(344)
+corr_answer = int(212)
 var_session = True 
 
 while var_session:
