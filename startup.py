@@ -35,7 +35,7 @@ while var_session:
         end = time.time()
         print("Well done m8!!")
         email = input("Please write your email here, it will only be used to contact the winner. ")
-        name = input("Please write your name or preferred nickname here. It will only be used for leaderboard display ")
+        name = input("Please write your name or preferred nickname here. It will only be used for leaderboard display: ")
         time = end - start 
         
         myCsvRow = [email, name, time]
@@ -46,3 +46,6 @@ while var_session:
             writer_object.writerow(myCsvRow)
             fd.close()
         var_session = False 
+        
+        
+

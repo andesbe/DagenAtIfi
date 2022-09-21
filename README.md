@@ -14,3 +14,9 @@ Remember to run
 :set autoread
 
 in vim for the leaderboard txt file. This is to ensure that it updates when the startup.py script pushes changes. 
+
+
+
+### TODO
+
+Create a try/except that loops if anything other than an int is input into startup.py
