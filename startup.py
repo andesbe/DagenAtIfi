@@ -1,5 +1,6 @@
 import time
-from csv import writer
+import pandas as pd
+#from leaderboard_update import updating_leaderboard
 
 start = time.time()
 
@@ -18,10 +19,17 @@ print('')
 print('')
 print('')
 
+while 1:
+    try:
+        answer = int(input("Write your answer here: "))
+        break
+    except ValueError:
+        print("Please only enter int as data\n")
+        continue
 
 
 
-answer = int(input("Write your answer here: "))
+
 corr_answer = int(212)
 var_session = True 
 
