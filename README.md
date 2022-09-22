@@ -13,7 +13,9 @@ Remember to run
 
 :set autoread
 
-in vim for the leaderboard txt file. This is to ensure that it updates when the startup.py script pushes changes. 
+in vim for the leaderboard txt file. This is to ensure that it updates when the startup.py script pushes changes.
+
+Alternatively, you could run the scripting_print.py file in a terminal. 
 
 
 
