@@ -1,59 +1,20 @@
 import time
 import pandas as pd
-#from leaderboard_update import updating_leaderboard
-
-start = time.time()
-
-print('')
-print('')
-print('')
-print('')
-print('░██╗░░░░░░░██╗███████╗██╗░░░░░░█████╗░░█████╗░███╗░░░███╗███████╗')
-print('░██║░░██╗░░██║██╔════╝██║░░░░░██╔══██╗██╔══██╗████╗░████║██╔════╝')
-print('░╚██╗████╗██╔╝█████╗░░██║░░░░░██║░░╚═╝██║░░██║██╔████╔██║█████╗░░')
-print('░░████╔═████║░██╔══╝░░██║░░░░░██║░░██╗██║░░██║██║╚██╔╝██║██╔══╝░░')
-print('░░╚██╔╝░╚██╔╝░███████╗███████╗╚█████╔╝╚█████╔╝██║░╚═╝░██║███████╗')
-print('░░░╚═╝░░░╚═╝░░╚══════╝╚══════╝░╚════╝░░╚════╝░╚═╝░░░░░╚═╝╚══════╝')
-print('')
-print('')
-print('')
-print('')
-
-while 1:
-    try:
-        answer = int(input("Write your answer here: "))
-        break
-    except ValueError:
-        print("Please only enter int as data\n")
-        continue
+import csv
+from functions import print_welcome_txt , take_input, loop_and_print, sort_and_return_top_entries, print_to_txt, test
+import time
 
 
 
+def main():
+    #Taking the correct input and writing to leaderboard.csv
+    print_welcome_txt()
+    corr_answer = str(212)
+    test(corr_answer)
+    
+    #Updating the leaderboard
+    top_entries = sort_and_return_top_entries()
+    print_to_txt(top_entries)
 
-corr_answer = int(212)
-var_session = True 
-
-while var_session:
-        
-    if answer != corr_answer:
-        print("Try again ya cunt!")
-        answer = int(input("Write your answer here: "))
-        
-    else: 
-        end = time.time()
-        print("Well done m8!!")
-        email = input("Please write your email here, it will only be used to contact the winner. ")
-        name = input("Please write your name or preferred nickname here. It will only be used for leaderboard display: ")
-        time = end - start 
-        
-        myCsvRow = [email, name, time]
-
-        #Opening up the .csv file and writing the entry as a new row
-        with open('leaderboard.csv','a') as fd:
-            writer_object = writer(fd)
-            writer_object.writerow(myCsvRow)
-            fd.close()
-        var_session = False 
-        
-        
-
+if __name__ == "__main__":
+    main()
