@@ -20,57 +20,13 @@ def print_welcome_txt():
     print('')
     print('')
     
-def take_input():
-    """Creates a loop that only breaks when the 
-    correct input in the correct datatype is entered
-
-    Returns:
-        int: the number of vowels in the text
-    """
-
-
+        
 def loop_and_print(corr_answer):
     """takes the answer input and if correct, appends a new line to the leaderboard.csv file with the contestant info
 
     Args:
         ans_int (int): the number of vowels in the text according to the contestant
     """
-    """
-    while 1:
-        try:
-            answer = (input("Write your answer here: "))
-            break
-        except ValueError:
-            print("Please only enter int as data\n")
-            continue
-        """
-
-    var_session = True 
-    while 1: 
-        answer = (input("Write your answer here: "))
-        if answer == corr_answer: 
-            end = time.time()
-            print("Well done m8!!")
-            email = input("Please write your email here, it will only be used to contact the winner. ")
-            name = input("Please write your name or preferred nickname here. It will only be used for leaderboard display: ")
-            time = end - start 
-            
-            myCsvRow = [email, name, time]
-
-            #Opening up the .csv file and writing the entry as a new row
-            with open('leaderboard.csv','a') as fd:
-                writer_object = csv.writer(fd)
-                writer_object.writerow(myCsvRow)
-                fd.close()
-            break
-        else:
-            print("Try again ya cunt!")
-            #answer = (input("Write your answer here: "))
-            continue 
-            
-        
-        
-def test(corr_answer):
     start = time.time()
     var_session = True 
 
