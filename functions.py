@@ -33,13 +33,13 @@ def loop_and_print(corr_answer):
     while var_session:
         answer = str(input("Write your answer here: "))
         if answer != corr_answer:
-            print("Try again ya cunt!")
+            print("Try again please!")
             #answer = (input("Write your answer here: "))
             
         else: 
             end = time.time()
             print("Well done m8!!")
-            email = input("Please write your email here, it will only be used to contact the winner. ")
+            email = input("Please write your email here, it will only be used to contact the winner:  ")
             name = input("Please write your name or preferred nickname here. It will only be used for leaderboard display: ")
             time_elapsed = end - start 
             
@@ -78,17 +78,14 @@ def print_to_txt(dataframe):
     str4 = str("██║     ██╔══╝  ██╔══██║██║  ██║██╔══╝  ██╔══██╗██╔══██╗██║   ██║██╔══██║██╔══██╗██║  ██║╚═╝╚═╝\n")
     str5 = str("███████╗███████╗██║  ██║██████╔╝███████╗██║  ██║██████╔╝╚██████╔╝██║  ██║██║  ██║██████╔╝██╗██╗\n")
     str6 = str("╚══════╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝\n")
-    print(dataframe)
     dataframe_new = dataframe.drop("emails", axis = 1)
-    with open("test.txt", "w") as file:
+    with open("show_leaderboard.txt", "w") as file:
         file.write(str1)
         file.write(str2)
         file.write(str3)
         file.write(str4)
         file.write(str5)
         file.write(str6)
-        file.write("\n")
-        file.write("\n")
         file.write("\n")
         file.write("\n")
         file.write("\n")
